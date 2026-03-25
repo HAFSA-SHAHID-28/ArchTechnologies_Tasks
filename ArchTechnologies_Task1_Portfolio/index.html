@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hafsa Shahid — Portfolio</title>
+
+    <!--title logo -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo2.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo1.png" media="(prefers-color-scheme: dark)">
+
+
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- google font cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- Disable source view by right click -->
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <style>
+        ::selection {
+            background: #fff;
+            color: #000;
+        }
+
+        body::after {
+            content: "© 2025 Hafsa Shahid";
+            position: fixed;
+            bottom: 5px;
+            right: 10px;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a class="nav-logo" href="#">hafsa.</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-bg-circle circle-1"></div>
+        <div class="hero-bg-circle circle-2"></div>
+        <div class="hero-content">
+            <div class="hero-tag">Available for opportunities</div>
+            <h1>
+                Hafsa<br>
+                <em>Shahid</em><br>
+                <span class="outline">Developer.</span>
+            </h1>
+            <p class="hero-sub">
+                Frontend developer, startup co-founder & MERN stack student,
+                building clean, user-focused digital experiences with real-world functionality.
+            </p>
+            <div class="hero-ctas">
+                <a href="#projects" class="btn-primary">View My Work ↓</a>
+                <a href="#contact" class="btn-outline">Get in Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div>
+                    <div class="stat-num">3<span>+</span></div>
+                    <div class="stat-label">Internships</div>
+                </div>
+                <div>
+                    <div class="stat-num">30<span>+</span></div>
+                    <div class="stat-label">Live Projects</div>
+                </div>
+                <div>
+                    <div class="stat-num">1700<span>+</span></div>
+                    <div class="stat-label">LinkedIn Followers</div>
+                </div>
+                <div>
+                    <div class="stat-num">1</div>
+                    <div class="stat-label">Startup Founded</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="divider">
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="about-grid">
+            <div class="about-img-wrap reveal">
+                <div class="about-img-placeholder">
+                    <div class="initials-big">HS</div>
+                    <div class="about-img-tag">Hafsa Shahid</div>
+                    <div class="about-corner"></div>
+                    <div class="about-corner-bl"></div>
+                </div>
+            </div>
+            <div class="about-text reveal">
+                <span class="section-label">Introduction</span>
+                <h2 class="section-title">Crafting interfaces<br><em>with intent.</em></h2>
+                <p>I'm an 18-year-old frontend developer from Karachi, currently in my final year of FSc (Computer
+                    Science) and enrolled in the MERN Stack program at <strong>Saylani Mass IT Training (SMIT)</strong>.
+                </p>
+                <p>My ambition is to become a full-stack engineer who doesn't just write code — but builds products.
+                    That drive led me to <strong>co-found Beginly</strong>, a social media startup that helps local
+                    businesses build their brand on Instagram. I'm the idea originator and director of the venture.</p>
+                <p>I've completed <strong>2 frontend internships</strong>, taught myself React, Firebase, and
+                    TypeScript, and managed to grow my LinkedIn following to 1,700+ through consistent, honest content
+                    sharing. I believe in learning by shipping real things.</p>
+                <div class="about-tags">
+                    <span class="tag">MERN Stack</span>
+                    <span class="tag">React.js</span>
+                    <span class="tag">UI Design</span>
+                    <span class="tag">Startup Founder</span>
+                    <span class="tag">Karachi, PK</span>
+                    <span class="tag">Open to Internships</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <span class="section-label">Capabilities</span>
+        <h2 class="section-title">Skills & Technologies</h2>
+        <p class="section-desc">A mix of frontend, design, and tools I use to bring ideas to life.</p>
+
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <span class="skill-icon"><i class="fa-solid fa-bolt"></i></span>
+                <h3>Core Frontend</h3>
+                <div class="skill-items">
+                    <span class="skill-pill">HTML5</span>
+                    <span class="skill-pill">CSS3</span>
+                    <span class="skill-pill">JavaScript ES6+</span>
+                    <span class="skill-pill">React.js</span>
+                    <span class="skill-pill">Responsive Design</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <span class="skill-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                <h3>Libraries & Stack</h3>
+                <div class="skill-items">
+                    <span class="skill-pill">Bootstrap</span>
+                    <span class="skill-pill">GSAP</span>
+                    <span class="skill-pill">TypeScript</span>
+                    <span class="skill-pill">Firebase</span>
+                    <span class="skill-pill">API Integration</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <span class="skill-icon"><i class="fa-solid fa-gears"></i></span>
+                <h3>Tools & Workflow</h3>
+                <div class="skill-items">
+                    <span class="skill-pill">Git & GitHub</span>
+                    <span class="skill-pill">Netlify</span>
+                    <span class="skill-pill">VS Code</span>
+                    <span class="skill-pill">Notion</span>
+                    <span class="skill-pill">Figma</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <span class="skill-icon"><i class="fa-solid fa-palette"></i></span>
+                <h3>Design & Visual</h3>
+                <div class="skill-items">
+                    <span class="skill-pill">Adobe Illustrator</span>
+                    <span class="skill-pill">Adobe Photoshop</span>
+                    <span class="skill-pill">Canva</span>
+                    <span class="skill-pill">UI/UX Basics</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <span class="skill-icon"><i class="fa-solid fa-mobile"></i></span>
+                <h3>Social & Content</h3>
+                <div class="skill-items">
+                    <span class="skill-pill">Instagram Strategy</span>
+                    <span class="skill-pill">Carousel Design</span>
+                    <span class="skill-pill">LinkedIn Content</span>
+                    <span class="skill-pill">Branding</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <span class="skill-icon"><i class="fa-solid fa-swatchbook"></i></span>
+                <h3>Currently Learning</h3>
+                <div class="skill-items">
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">Express.js</span>
+                    <span class="skill-pill">MongoDB</span>
+                    <span class="skill-pill">Tailwind CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <span class="section-label">Work</span>
+        <h2 class="section-title">Featured Projects</h2>
+        <p class="section-desc">Real things I've built — with descriptions, tech used, and outcomes.</p>
+
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-img"><i class="fa-solid fa-image"></i><span class="project-num">01</span></div>
+                <div class="project-body">
+                    <div class="project-tech"><span class="tech-badge">HTML</span><span
+                            class="tech-badge">CSS</span><span class="tech-badge">JS</span></div>
+                    <h3>Pixora Image Gallery</h3>
+                    <p>Interactive image gallery with category-based filtering, smooth transitions, and a clean, minimal
+                        UI. Built to demonstrate DOM manipulation and dynamic filtering logic.</p>
+                    <div class="project-outcome">✦ Clean filter UX with zero-library JavaScript.</div>
+                    <div class="project-links">
+                        <a href="https://pixora-image-gallery.netlify.app/" target="_blank" class="project-link">↗ Live
+                            Demo</a>
+                        <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="project-link">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-img"><i class="fa-solid fa-calculator"></i><span class="project-num">02</span></div>
+                <div class="project-body">
+                    <div class="project-tech"><span class="tech-badge">HTML</span><span
+                            class="tech-badge">CSS</span><span class="tech-badge">JS</span></div>
+                    <h3>Calcora Calculator</h3>
+                    <p>Smart calculator with light/dark mode toggle. Focused on UI polish and accurate logic handling
+                        for edge cases. Clean layout with accessible keyboard support.</p>
+                    <div class="project-outcome">✦ Theme toggle via CSS variables; smooth UX.</div>
+                    <div class="project-links">
+                        <a href="https://calcora-smartcalculator.netlify.app/" target="_blank" class="project-link">↗
+                            Live Demo</a>
+                        <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="project-link">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-img"><i class="fa-solid fa-brain"></i><span class="project-num">03</span></div>
+                <div class="project-body">
+                    <div class="project-tech"><span class="tech-badge">HTML</span><span
+                            class="tech-badge">CSS</span><span class="tech-badge">JS</span></div>
+                    <h3>NeuronSpark Quiz</h3>
+                    <p>Multi-question quiz application with real-time score tracking and engaging animations. Each
+                        question renders dynamically from a JS data structure.</p>
+                    <div class="project-outcome">✦ Dynamic rendering, timer logic, result screen.</div>
+                    <div class="project-links">
+                        <a href="https://neuron-spark.netlify.app/" target="_blank" class="project-link">↗ Live Demo</a>
+                        <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="project-link">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-img"><i class="fa-solid fa-list-check"></i><span class="project-num">04</span></div>
+                <div class="project-body">
+                    <div class="project-tech"><span class="tech-badge">HTML</span><span
+                            class="tech-badge">CSS</span><span class="tech-badge">JS</span></div>
+                    <h3>TaskNova Todo App</h3>
+                    <p>Full-featured task manager with add, complete, delete, and filter functionality. Uses
+                        localStorage for persistence — tasks survive page refresh.</p>
+                    <div class="project-outcome">✦ localStorage persistence; filter by status.</div>
+                    <div class="project-links">
+                        <a href="https://task-nova-js.netlify.app/" target="_blank" class="project-link">↗ Live Demo</a>
+                        <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="project-link">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-img"><i class="fa-solid fa-building-columns"></i><span class="project-num">05</span>
+                </div>
+                <div class="project-body">
+                    <div class="project-tech"><span class="tech-badge">HTML</span><span
+                            class="tech-badge">CSS</span><span class="tech-badge">JS</span></div>
+                    <h3>Cashora ATM</h3>
+                    <p>ATM simulation demonstrating conditional logic, input validation, and UI state management.
+                        Handles deposits, withdrawals, and balance checks.</p>
+                    <div class="project-outcome">✦ State machine logic; real-world flow simulation.</div>
+                    <div class="project-links">
+                        <a href="https://cashoora.netlify.app/" target="_blank" class="project-link">↗ Live Demo</a>
+                        <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="project-link">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card reveal">
+                <div class="project-img"><i class="fa-solid fa-globe"></i><span class="project-num">06</span></div>
+                <div class="project-body">
+                    <div class="project-tech"><span class="tech-badge">HTML</span><span class="tech-badge">CSS</span>
+                    </div>
+                    <h3>Charity Website</h3>
+                    <p>Multi-page responsive website for a charity organization — built with semantic HTML and custom
+                        CSS only. Fully responsive across devices.</p>
+                    <div class="project-outcome">✦ Multi-page layout; no frameworks, pure CSS.</div>
+                    <div class="project-links">
+                        <a href="https://chariity-website.netlify.app/" target="_blank" class="project-link">↗ Live
+                            Demo</a>
+                        <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="project-link">⌥ GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <span class="section-label">History</span>
+        <h2 class="section-title">Work Experience</h2>
+        <p class="section-desc">Internships and ventures that shaped how I think and build.</p>
+
+        <div class="experience-list">
+            <div class="exp-item reveal">
+                <div class="exp-meta">
+                    <div class="exp-date">2025 — Present</div>
+                    <div class="exp-company">Beginly</div>
+                </div>
+                <div class="exp-body">
+                    <h3>Co-Founder & Director</h3>
+                    <span class="exp-badge badge-current">Active</span>
+                    <ul>
+                        <li>Originated the idea and lead the strategic direction of a social media startup focused on
+                            Instagram growth for local businesses.</li>
+                        <li>Designing carousel posts, developing brand identities, and managing client content
+                            pipelines.</li>
+                        <li>Building out Beginly's own brand presence on LinkedIn and Instagram with a minimal
+                            light-blue aesthetic.</li>
+                        <li>Managing business operations, partnerships, and co-founder collaboration.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-meta">
+                    <div class="exp-date">Early 2026</div>
+                    <div class="exp-company">Arch Technologies</div>
+                </div>
+                <div class="exp-body">
+                    <h3>Frontend Developer Intern</h3>
+                    <span class="exp-badge badge-current">Current</span>
+                    <ul>
+                        <li>Completing monthly development tasks including building this portfolio.</li>
+                        <li>Applying advanced frontend concepts: animations, responsive design, modern CSS.</li>
+                        <li>Strengthening portfolio-level project quality under structured task deadlines.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-meta">
+                    <div class="exp-date">Late 2025 — 2026</div>
+                    <div class="exp-company">SyntecxHub</div>
+                </div>
+                <div class="exp-body">
+                    <h3>Frontend Developer Intern</h3>
+                    <span class="exp-badge badge-completed">Completed</span>
+                    <ul>
+                        <li>Built frontend UI components using HTML, CSS, and JavaScript.</li>
+                        <li>Implemented interactive features and improved code structure across assigned tasks.</li>
+                        <li>Produced the first iteration of this portfolio as part of internship deliverables.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item reveal">
+                <div class="exp-meta">
+                    <div class="exp-date">Dec 2025 — Jan 2026</div>
+                    <div class="exp-company">CodeAlpha</div>
+                </div>
+                <div class="exp-body">
+                    <h3>Frontend Developer Intern</h3>
+                    <span class="exp-badge badge-completed">Completed</span>
+                    <ul>
+                        <li>Built Calcora (calculator) and Pixora (image gallery) — both live on Netlify.</li>
+                        <li>Used HTML, CSS, JavaScript to implement responsive, interactive UIs.</li>
+                        <li>Completed all remote tasks on time following best coding practices.</li>
+                        <li>Received an internship completion certificate from CodeAlpha.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <span class="section-label">Education</span>
+        <h2 class="section-title">Background &<br>Certifications</h2>
+        <p class="section-desc">Formal education, structured programs, and self-earned certifications.</p>
+
+        <div class="edu-grid reveal">
+            <div class="edu-card">
+                <div class="edu-year">2024 — Present</div>
+                <h3>Intermediate (Computer Science) — FSc-II</h3>
+                <p class="school">Govt. Girls Degree College, Clifton, Karachi</p>
+                <p>Studying Computer Science, Physics, and Mathematics. Won 1st place in a software competition during
+                    1st year for logo and poster design.</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-year">2025 — Ongoing</div>
+                <h3>MERN Stack Development</h3>
+                <p class="school">Saylani Mass IT Training (SMIT)</p>
+                <p>HTML, CSS, Bootstrap, JavaScript (ES5/ES6), GSAP, React, TypeScript, Firebase, and Netlify. Expanding
+                    into Tailwind, Node.js, Express, and MongoDB.</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-year">Sep — Dec 2024</div>
+                <h3>Graphics Design Essentials</h3>
+                <p class="school">Bano Qabil (BQ)</p>
+                <p>3-month intensive covering Adobe Illustrator, Photoshop, and Canva. Created logos, mockups, and
+                    branding materials.</p>
+            </div>
+            <div class="edu-card">
+                <div class="edu-year">2011 — 2024</div>
+                <h3>Matriculation (Science)</h3>
+                <p class="school">Zeal Public School, DHA Phase 2, Karachi</p>
+                <p>Completed a Science-focused curriculum: Mathematics, Physics, Chemistry, Biology. Built strong
+                    analytical and problem-solving foundations.</p>
+            </div>
+        </div>
+
+        <div class="certs-grid">
+            <a href="./assets/certificate/Hackathon.pdf" target="_blank" class="cert-card reveal">
+                <div class="cert-icon">🏆</div>
+                <div>
+                    <h4>FemHack 2025 — Hackathon</h4>
+                    <span>SMIT · April 2025</span>
+                </div>
+            </a>
+            <a href="./assets/certificate/banoqabil.jpg" target="_blank" class="cert-card reveal">
+                <div class="cert-icon">🎨</div>
+                <div>
+                    <h4>Graphic Design Essentials</h4>
+                    <span>Bano Qabil · June 2025</span>
+                </div>
+            </a>
+            <a href="./assets/certificate/codealpha.pdf" target="_blank" class="cert-card reveal">
+                <div class="cert-icon">💻</div>
+                <div>
+                    <h4>Frontend Dev Internship</h4>
+                    <span>CodeAlpha · Jan 2026</span>
+                </div>
+            </a>
+            <a href="./assets/certificate/webdev.png" target="_blank" class="cert-card reveal">
+                <div class="cert-icon">🌐</div>
+                <div>
+                    <h4>Web Development</h4>
+                    <span>Sololearn · July 2024</span>
+                </div>
+            </a>
+            <a href="./assets/certificate/javascript.jpg" target="_blank" class="cert-card reveal">
+                <div class="cert-icon">⚡</div>
+                <div>
+                    <h4>Introduction to JavaScript</h4>
+                    <span>Sololearn · Nov 2025</span>
+                </div>
+            </a>
+            <a href="./assets/certificate/cybersecurity.pdf" target="_blank" class="cert-card reveal">
+                <div class="cert-icon">🔐</div>
+                <div>
+                    <h4>Cybersecurity Awareness</h4>
+                    <span>HP Life · Nov 2024</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+        <span class="section-label">Recognition</span>
+        <h2 class="section-title">Achievements &<br>Honors</h2>
+        <p class="section-desc">Milestones earned through consistency, competitions, and real results.</p>
+
+        <div class="achievements-grid">
+            <div class="achievement-card reveal">
+                <div class="achievement-icon">🥇</div>
+                <div>
+                    <div class="achievement-year">April 2025</div>
+                    <h3>FemHack Winner — SMIT Hackathon</h3>
+                    <p>Participated and won at FemHack 2025, a hackathon organized by Saylani Mass IT Training (SMIT),
+                        competing against peers in a fast-paced development challenge.</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon">🏆</div>
+                <div>
+                    <div class="achievement-year">2024 — 1st Year College</div>
+                    <h3>1st Place — Software Competition</h3>
+                    <p>Won first place trophy at a college-level software competition during 1st year, creating logos
+                        and posters using professional graphic design tools.</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon">📈</div>
+                <div>
+                    <div class="achievement-year">2025 — Organic Growth</div>
+                    <h3>1,700+ LinkedIn Followers</h3>
+                    <p>Grew LinkedIn following to over 1,700 entirely organically over 8 months through consistent,
+                        authentic content sharing about the tech learning journey — no ads, no shortcuts.</p>
+                </div>
+            </div>
+            <div class="achievement-card reveal">
+                <div class="achievement-icon">🚀</div>
+                <div>
+                    <div class="achievement-year">2025 — Present</div>
+                    <h3>Co-Founded Beginly Startup</h3>
+                    <p>Originated and co-founded Beginly at 18, a social media startup helping local businesses grow on
+                        Instagram. Currently active, building clients and brand presence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- TESTIMONIALS -->
+    <section id="testimonials">
+        <span class="section-label">Endorsements</span>
+        <h2 class="section-title">What People Say</h2>
+        <p class="section-desc">Feedback from mentors, collaborators, and peers.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card reveal">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">
+                    I received positive feedback during my internship for completing tasks on time and maintaining
+                    clean, structured code. I focus on improving with every project and learning from feedback.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">CA</div>
+                    <div>
+                        <div class="author-name">Internship Feedback</div>
+                        <div class="author-title">CodeAlpha — 2026</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-card reveal">
+                <div class="quote-mark">"</div>
+                <p class="testimonial-text">
+                    During my learning journey at SMIT, I was appreciated for consistency and effort in building
+                    projects. I actively practice and try to improve both design and logic with each project.
+                </p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MN</div>
+                    <div>
+                        <div class="author-name">Learning Feedback</div>
+                        <div class="author-title">SMIT Program — 2025</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial-note reveal">
+            <span style="font-size:1.4rem;">💬</span>
+            <p>More testimonials are being collected from supervisors and collaborators. If you've worked with me and
+                would like to share feedback, feel free to reach out via <strong>LinkedIn</strong> — I'd love to add
+                your endorsement.</p>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- BLOG -->
+    <section id="blog">
+        <span class="section-label">Writing</span>
+        <h2 class="section-title">Blog & Articles</h2>
+        <p class="section-desc">Thoughts on frontend development, learning, and building in public.</p>
+
+        <div class="blog-grid">
+            <a href="https://www.linkedin.com/in/hafsa-shahid-b43339339/" target="_blank" class="blog-card reveal">
+                <div class="blog-platform">LinkedIn</div>
+                <h3>My MERN Stack Learning Journey — SMIT</h3>
+                <p>
+                    Sharing my learning journey of MERN stack at SMIT, including projects and concepts I'm currently
+                    working on.
+                </p>
+                <span class="blog-arrow">Read on LinkedIn →</span>
+            </a>
+            <a href="https://www.linkedin.com/in/hafsa-shahid-b43339339/" target="_blank" class="blog-card reveal">
+                <div class="blog-platform">LinkedIn</div>
+                <h3>What I Learned from 2 Frontend Internships at 18</h3>
+                <p>
+                    Key lessons I learned from my frontend internships, including time management, code quality, and
+                    working on real tasks.
+                </p>
+                <span class="blog-arrow">Read on LinkedIn →</span>
+            </a>
+            <a href="https://www.linkedin.com/in/hafsa-shahid-b43339339/" target="_blank" class="blog-card reveal">
+                <div class="blog-platform">LinkedIn</div>
+                <h3>Why I Co-Founded a Startup While Studying Computer Science</h3>
+                <p>
+                    Why I started a small startup while studying and what I learned from working with real clients.
+                </p>
+                <span class="blog-arrow">Read on LinkedIn →</span>
+            </a>
+        </div>
+    </section>
+
+    <hr class="divider">
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <span class="section-label">Reach Out</span>
+        <h2 class="section-title">Let's Connect</h2>
+        <p class="section-desc">Open to internship opportunities, collaborations, and good conversations.</p>
+
+        <div class="contact-layout">
+            <div class="contact-info reveal">
+                <p style="color:var(--muted); font-size:0.96rem; line-height:1.8; margin-bottom: 8px;">
+                    Whether you have a project, an internship opportunity, or just want to talk tech — I'm happy to hear
+                    from you. I respond to all genuine messages.
+                </p>
+                <div class="contact-links">
+                    <a href="mailto:hafsa.shahid.282007@email.com" class="contact-link-item">
+                        <div class="contact-link-icon"><i class="fa-regular fa-envelope"></i></div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">Email</div>
+                            <div class="contact-link-val">hafsa.shahid.282007@email.com</div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/hafsa-shahid-b43339339/" target="_blank"
+                        class="contact-link-item">
+                        <div class="contact-link-icon"><i class="fa-brands fa-linkedin"></i></div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">LinkedIn</div>
+                            <div class="contact-link-val">linkedin.com/in/hafsa-shahid</div>
+                        </div>
+                    </a>
+                    <a href="https://github.com/HAFSA-SHAHID-28" target="_blank" class="contact-link-item">
+                        <div class="contact-link-icon"><i class="fa-brands fa-square-github"></i></div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">GitHub</div>
+                            <div class="contact-link-val">github.com/HAFSA-SHAHID-28</div>
+                        </div>
+                    </a>
+                    <a href="./assets/resume.pdf" target="_blank" class="contact-link-item">
+                        <div class="contact-link-icon"><i class="fa-solid fa-file"></i></div>
+                        <div class="contact-link-text">
+                            <div class="contact-link-label">Resume</div>
+                            <div class="contact-link-val">Download PDF</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-form reveal">
+                <div class="form-group">
+                    <label>Your Name</label>
+                    <input type="text" placeholder="e.g. Ahmad Ali">
+                </div>
+                <div class="form-group">
+                    <label>Email Address</label>
+                    <input type="email" placeholder="your@email.com">
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Internship / Collaboration / Other">
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Tell me about your project or opportunity..."></textarea>
+                </div>
+                <button class="form-submit">Send
+                    Message →</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-left">hafsa.</div>
+        <div class="footer-right">© 2026 Hafsa Shahid — Built with care, deployed with pride.</div>
+    </footer>
+
+    <!-- custom js -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
