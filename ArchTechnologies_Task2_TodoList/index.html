@@ -1,82 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donevia | Smart To-Do App</title>
-    <meta name="author" content="Hafsa Shahid">
-    <meta name="copyright" content="© 2025 Hafsa Shahid. All rights reserved.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tasque — Smart Task Manager</title>
+  <meta name="author" content="Hafsa Shahid">
+  <meta name="copyright" content="© 2025 Hafsa Shahid. All rights reserved.">
 
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous">
+  <!--title logo -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo2.png" media="(prefers-color-scheme: light)">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo1.png" media="(prefers-color-scheme: dark)">
 
-    <!-- custom css -->
-     <link rel="stylesheet" href="./style.css">
 
-    <!-- Disable source view by right click -->
-    <script>
-        document.addEventListener('contextmenu', event => event.preventDefault());
-    </script>
-    <style>
-        ::selection { background: #fff; color: #000; }
-        body::after {
-            content: "© 2025 Hafsa Shahid";
-            position: fixed;
-            bottom: 5px;
-            right: 10px;
-            font-size: 10px;
-            opacity: 0.6;
-        }
-    </style>
+  <!-- font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- google font  -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- Disable source view by right click -->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+  <style>
+    ::selection {
+      background: #fff;
+      color: #000;
+    }
+
+    body::after {
+      content: "© 2025 Hafsa Shahid";
+      position: fixed;
+      bottom: 5px;
+      right: 10px;
+      font-size: 10px;
+      opacity: 0.6;
+    }
+  </style>
 
 </head>
+
 <body>
 
+  <div class="header">
+    <div class="logo">
+      <span class="logo-dot"></span>
+      tasque
+      <span class="logo-dot"></span>
+    </div>
+    <p class="tagline">focus on what matters, get it done</p>
+  </div>
 
-     <main class="donevia-app">
-    
-    <!-- Header -->
-    <header class="app-header">
-      <h1>Donevia</h1>
-      <p>Plan • Track • Complete</p>
-    </header>
-    
-    <!-- Input -->
-    <section class="task-input">
-      <input type="text" id="taskInput" placeholder="What needs to be done?"/>
-      <button id="addTaskBtn"><i class="fa-solid fa-plus"></i></button>
-    </section>
-    
-    
-    <p id="errorMessage"></p>
-    
-     <!-- Filters -->
-     <section class="task-filters">
-       <button data-filter="all" class="active">All</button>
-       <button data-filter="active">Active</button>
-       <button data-filter="completed">Completed</button>
-     </section>
-     
-     
-      <!-- Task List -->
-      <ul id="taskList" class="task-list">
-      </ul>
-      
-      <!-- Footer -->
-      <footer class="task-footer">
-        <span id="taskCount">0 tasks</span>
-        <button id="clearCompleted"><i class="fa-solid fa-trash"></i>Clear Completed</button>
-      </footer>
-    
-    
-  </main>
+  <div class="stats-bar">
+    <div class="stat-card">
+      <div class="stat-num" id="stat-total">0</div>
+      <div class="stat-label">Total</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-pending">0</div>
+      <div class="stat-label">Pending</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num" id="stat-done">0</div>
+      <div class="stat-label">Done</div>
+    </div>
+  </div>
 
+  <div class="main-card">
+    <!-- INPUT -->
+    <div class="input-area">
+      <div class="input-row">
+        <input type="text" class="task-input" id="taskInput" placeholder="Add a new task..." maxlength="120">
+        <button class="add-btn" onclick="addTask()">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <line x1="12" y1="5" x2="12" y2="19" />
+            <line x1="5" y1="12" x2="19" y2="12" />
+          </svg>
+          Add
+        </button>
+      </div>
+      <div class="meta-row">
+        <select class="meta-select" id="prioritySelect">
+          <option value="low">🟢 Low priority</option>
+          <option value="medium" selected>🟡 Medium priority</option>
+          <option value="high">🔴 High priority</option>
+        </select>
+        <input type="date" class="meta-date" id="dueDateInput">
+      </div>
+    </div>
 
+    <!-- SEARCH -->
+    <div class="search-wrap">
+      <svg class="search-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+        stroke-width="2">
+        <circle cx="11" cy="11" r="8" />
+        <line x1="21" y1="21" x2="16.65" y2="16.65" />
+      </svg>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search tasks..." oninput="renderTasks()"
+        style="padding-left:36px;">
+    </div>
 
+    <!-- PROGRESS -->
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>Progress</span>
+        <span id="progressPct">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
 
+    <!-- FILTERS -->
+    <div class="filter-tabs" style="margin-top:16px;">
+      <button class="tab-btn active" onclick="setFilter('all', this)">All</button>
+      <button class="tab-btn" onclick="setFilter('active', this)">Active</button>
+      <button class="tab-btn" onclick="setFilter('completed', this)">Done</button>
+      <button class="tab-btn" onclick="setFilter('high', this)">High Priority</button>
+    </div>
 
-    <!-- custom js -->
-     <script src="./index.js"></script>
-    
+    <!-- TASK LIST -->
+    <div class="task-list" id="taskList"></div>
+
+    <!-- FOOTER -->
+    <div class="card-footer">
+      <span class="footer-count" id="footerCount">0 tasks</span>
+      <button class="clear-btn" id="clearBtn" onclick="clearCompleted()" disabled>Clear completed</button>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <!-- custom js -->
+  <script src="./index.js"></script>
 </body>
+
 </html>
