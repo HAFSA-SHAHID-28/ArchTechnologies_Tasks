@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donevia | Smart To-Do App</title>
+    <meta name="author" content="Hafsa Shahid">
+    <meta name="copyright" content="© 2025 Hafsa Shahid. All rights reserved.">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" crossorigin="anonymous">
+
+    <!-- custom css -->
+     <link rel="stylesheet" href="./style.css">
+
+    <!-- Disable source view by right click -->
+    <script>
+        document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+    <style>
+        ::selection { background: #fff; color: #000; }
+        body::after {
+            content: "© 2025 Hafsa Shahid";
+            position: fixed;
+            bottom: 5px;
+            right: 10px;
+            font-size: 10px;
+            opacity: 0.6;
+        }
+    </style>
+
+</head>
+<body>
+
+
+     <main class="donevia-app">
+    
+    <!-- Header -->
+    <header class="app-header">
+      <h1>Donevia</h1>
+      <p>Plan • Track • Complete</p>
+    </header>
+    
+    <!-- Input -->
+    <section class="task-input">
+      <input type="text" id="taskInput" placeholder="What needs to be done?"/>
+      <button id="addTaskBtn"><i class="fa-solid fa-plus"></i></button>
+    </section>
+    
+    
+    <p id="errorMessage"></p>
+    
+     <!-- Filters -->
+     <section class="task-filters">
+       <button data-filter="all" class="active">All</button>
+       <button data-filter="active">Active</button>
+       <button data-filter="completed">Completed</button>
+     </section>
+     
+     
+      <!-- Task List -->
+      <ul id="taskList" class="task-list">
+      </ul>
+      
+      <!-- Footer -->
+      <footer class="task-footer">
+        <span id="taskCount">0 tasks</span>
+        <button id="clearCompleted"><i class="fa-solid fa-trash"></i>Clear Completed</button>
+      </footer>
+    
+    
+  </main>
+
+
+
+
+
+    <!-- custom js -->
+     <script src="./index.js"></script>
+    
+</body>
+</html>
