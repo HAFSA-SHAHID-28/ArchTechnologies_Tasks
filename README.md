@@ -29,6 +29,29 @@ A **developer-focused portfolio** that presents skills, projects, and certificat
 
 ---
 
+### 2. **Tasque | Smart To-Do App ** 📝✨
+**Live Demo:** [Tasque]( https://tasque-todoapp.netlify.app/) 
+
+**Description:**  
+Tasque is a modern, minimal, and productivity-focused to-do application built to help users manage tasks efficiently with a clean and intuitive interface.
+
+Unlike basic to-do apps, Tasque emphasizes priority management, progress tracking, and enhanced UI interactions. 
+
+**Key Features:**
+- Add, edit, delete, and complete tasks
+- Task priority system (Low / Medium / High)
+- Due date support with overdue indication
+- Task filtering (All / Active / Completed / High Priority)
+- Real-time progress bar with completion percentage
+- Task search functionality
+- LocalStorage integration for data persistence
+- Clean UI with soft colors and smooth interactions
+- Fully responsive layout for all screen sizes
+
+**Tech Stack:** HTML5 | CSS3 | JavaScript (ES6) | LocalStorage | Netlify
+
+---
+
 
 ## 📌 Purpose
 This repository serves as:
