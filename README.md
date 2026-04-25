@@ -52,6 +52,31 @@ Unlike basic to-do apps, Tasque emphasizes priority management, progress trackin
 
 ---
 
+### 3. **Sautra | Ethical Audio Player ** 🎧✨ 
+**Live Demo:** [Tasque]( https://tasque-todoapp.netlify.app/) 
+
+**Description:**  
+Sautra is a modern, minimal, and ethically-designed web-based audio player built with a focus on clean UI, smooth interactions, and purposeful listening.
+
+Unlike typical music players, Sautra is designed to support user-provided audio content only, allowing flexibility for educational, voice-based, or personal audio usage — making it a more mindful and customizable listening experience.
+
+**Key Features:**
+- Upload and play local audio files (MP3, WAV, etc.)
+- Dynamic playlist generation from user uploads
+- Play, pause, skip (next/previous) controls
+- Interactive progress bar with seek functionality
+- Volume control with smooth adjustment
+- Search functionality to quickly find tracks
+- Category tagging system for organized playback
+- “Now Playing” section with real-time updates
+- Animated track indicators and playback feedback
+- LocalStorage support for session persistence
+- Fully responsive layout with modern UI design
+
+**Tech Stack:** HTML5 | CSS3 | JavaScript (ES6) | Web Audio API | LocalStorage | Netlify
+
+---
+
 
 ## 📌 Purpose
 This repository serves as:
