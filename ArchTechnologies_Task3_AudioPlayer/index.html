@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Velvorea | Audio Player</title>
+    <meta name="author" content="Hafsa Shahid">
+  <meta name="copyright" content="© 2025 Hafsa Shahid. All rights reserved.">
+
+    <!--title logo -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/logo2.png"
+      media="(prefers-color-scheme: light)"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/logo1.png"
+      media="(prefers-color-scheme: dark)"
+    />
+
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- google font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Clash+Display:wght@400;500;600;700&family=Satoshi:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" />
+
+    Disable source view by right click
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+  <style>
+    ::selection {
+      background: #fff;
+      color: #000;
+    }
+
+    body::after {
+      content: "© 2025 Hafsa Shahid";
+      position: fixed;
+      bottom: 5px;
+      right: 10px;
+      font-size: 10px;
+      opacity: 0.6;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo">
+        <div class="logo-dot"></div>
+        Velvorea
+      </div>
+
+      <div class="nav-sec">
+        <div class="sec-lbl">Library</div>
+        <button class="nb on" onclick="setView('all', this)">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+          </svg>
+          All Tracks
+        </button>
+        <button class="nb" onclick="setView('liked', this)">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+            />
+          </svg>
+          Liked Songs
+        </button>
+        <button class="nb" onclick="setView('recent', this)">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+          >
+            <circle cx="12" cy="12" r="10" />
+            <polyline points="12,6 12,12 16,14" />
+          </svg>
+          Recently Played
+        </button>
+      </div>
+
+      <div class="nav-sec">
+        <div class="sec-lbl">Categories</div>
+        <button class="cb on" onclick="setCat('all', this)">
+          <span class="cdot" style="background: #1db954"></span>All<span
+            class="ccnt"
+            id="c-all"
+            >0</span
+          >
+        </button>
+        <button class="cb" onclick="setCat('pop', this)">
+          <span class="cdot" style="background: #ff6b6b"></span>Pop<span
+            class="ccnt"
+            id="c-pop"
+            >0</span
+          >
+        </button>
+        <button class="cb" onclick="setCat('ost', this)">
+          <span class="cdot" style="background: #ffd93d"></span>OST /
+          Soundtrack<span class="ccnt" id="c-ost">0</span>
+        </button>
+        <button class="cb" onclick="setCat('urdu', this)">
+          <span class="cdot" style="background: #c77dff"></span>Urdu / Desi<span
+            class="ccnt"
+            id="c-urdu"
+            >0</span
+          >
+        </button>
+        <button class="cb" onclick="setCat('lofi', this)">
+          <span class="cdot" style="background: #74c0fc"></span>Lo-fi /
+          Chill<span class="ccnt" id="c-lofi">0</span>
+        </button>
+        <button class="cb" onclick="setCat('other', this)">
+          <span class="cdot" style="background: #666"></span>Other<span
+            class="ccnt"
+            id="c-other"
+            >0</span
+          >
+        </button>
+      </div>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+      <div class="topbar">
+        <div class="sw">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+          <input
+            class="si"
+            id="searchIn"
+            placeholder="Search songs..."
+            oninput="render()"
+          />
+        </div>
+        <div class="pt" id="pgTitle">Your Library</div>
+      </div>
+
+      <div class="content">
+        <!--  UPLOAD ZONE -->
+        <div
+          class="upload-zone"
+          id="dz"
+          onclick="document.getElementById('fin').click()"
+        >
+          <input
+            type="file"
+            id="fin"
+            accept="audio/*,.mp3,.wav,.ogg,.flac,.m4a,.aac"
+            multiple
+            onchange="handleFiles(this.files)"
+          />
+          <div class="ui">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.2"
+            >
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="17,8 12,3 7,8" />
+              <line x1="12" y1="3" x2="12" y2="15" />
+            </svg>
+          </div>
+          <h3>Drop your audio files here</h3>
+          <p>
+            Drag & drop, or <span class="ul">click to browse</span> your device
+          </p>
+          <div class="uf">MP3 · WAV · OGG · FLAC · M4A · AAC</div>
+        </div>
+
+        <!-- NOW PLAYING STRIP -->
+        <div class="nps" id="nps" style="display: none">
+          <div class="nps-art" id="npsArt">🎵</div>
+          <div class="nps-info">
+            <div class="nps-title" id="npsTitle">—</div>
+            <div class="nps-artist" id="npsArtist">—</div>
+            <div class="nps-prog">
+              <span class="ts" id="npsCur">0:00</span>
+              <div class="mb" id="mb" onclick="miniSeek(event)">
+                <div class="mf" id="mf"></div>
+              </div>
+              <span class="ts" id="npsDur">0:00</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- TRACK LIST -->
+        <div class="lh">
+          <div class="lt" id="listTitle">All Tracks</div>
+          <div class="lc" id="listCount">0 songs</div>
+        </div>
+        <div class="th">
+          <span>#</span><span>Title</span><span>Category</span><span>Time</span>
+        </div>
+        <div id="trackList"></div>
+      </div>
+    </main>
+
+    <!-- PLAYER BAR -->
+    <div class="pb">
+      <div class="bl">
+        <div class="ba" id="baArt">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="#444"
+            stroke-width="1.5"
+          >
+            <path d="M9 18V5l12-2v13" />
+            <circle cx="6" cy="18" r="3" />
+            <circle cx="18" cy="16" r="3" />
+          </svg>
+        </div>
+        <div>
+          <div class="bsong" id="baSong">—</div>
+          <div class="bart" id="baArt2">Select a track</div>
+        </div>
+        <button class="lkb" id="lkb" onclick="toggleLike()">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <div class="bc">
+        <div class="cr">
+          <button
+            class="cb2"
+            id="shBtn"
+            onclick="toggleShuffle()"
+            title="Shuffle"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="16,3 21,3 21,8" />
+              <line x1="4" y1="20" x2="21" y2="3" />
+              <polyline points="21,16 21,21 16,21" />
+              <line x1="4" y1="4" x2="9" y2="9" />
+            </svg>
+          </button>
+          <button class="cb2" onclick="prev()">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="19,20 9,12 19,4" />
+              <rect x="4" y="4" width="3" height="16" />
+            </svg>
+          </button>
+          <button class="pc" id="playBtn" onclick="togglePlay()">
+            <svg id="pico" viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,3 19,12 5,21" />
+            </svg>
+          </button>
+          <button class="cb2" onclick="next()">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <polygon points="5,4 15,12 5,20" />
+              <rect x="17" y="4" width="3" height="16" />
+            </svg>
+          </button>
+          <button
+            class="cb2"
+            id="rpBtn"
+            onclick="toggleRepeat()"
+            title="Repeat"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <polyline points="17,1 21,5 17,9" />
+              <path d="M3 11V9a4 4 0 014-4h14" />
+              <polyline points="7,23 3,19 7,15" />
+              <path d="M21 13v2a4 4 0 01-4 4H3" />
+            </svg>
+          </button>
+        </div>
+        <div class="pr">
+          <span class="tt" id="curT">0:00</span>
+          <div class="pt2" id="pt2" onclick="seekA(event)">
+            <div class="pf" id="pf"></div>
+          </div>
+          <span class="tt" id="totT">0:00</span>
+        </div>
+      </div>
+
+      <div class="br">
+        <button class="vb" onclick="toggleMute()">
+          <svg
+            id="vico"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <polygon points="11,5 6,9 2,9 2,15 6,15 11,19" />
+            <path d="M15.54 8.46a5 5 0 010 7.07M19.07 4.93a10 10 0 010 14.14" />
+          </svg>
+        </button>
+        <input
+          type="range"
+          class="vs"
+          id="vr"
+          min="0"
+          max="100"
+          value="80"
+          oninput="setVol(this.value)"
+        />
+      </div>
+    </div>
+
+    <div class="toast" id="toast"></div>
+    <audio id="audio"></audio>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
