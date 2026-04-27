@@ -52,8 +52,8 @@ Unlike basic to-do apps, Tasque emphasizes priority management, progress trackin
 
 ---
 
-### 3. **Sautra | Ethical Audio Player ** 🎧✨ 
-**Live Demo:** [Tasque]( https://tasque-todoapp.netlify.app/) 
+### 3. **Velvorea | Ethical Audio Player ** 🎧✨ 
+**Live Demo:** [Velvorea]( https://tasque-todoapp.netlify.app/) 
 
 **Description:**  
 Sautra is a modern, minimal, and ethically-designed web-based audio player built with a focus on clean UI, smooth interactions, and purposeful listening.
@@ -74,6 +74,32 @@ Unlike typical music players, Sautra is designed to support user-provided audio 
 - Fully responsive layout with modern UI design
 
 **Tech Stack:** HTML5 | CSS3 | JavaScript (ES6) | Web Audio API | LocalStorage | Netlify
+
+---
+
+### 4. **Zenvyra | Social Network Platform** 🌐✨  
+**Live Demo:** [Zenvyra](https://zenvyra-socialplatform.netlify.app/)
+
+**Description:**  
+Zenvyra is a modern, minimal, and interactive social networking platform designed to simulate real-world social media experiences with a clean and intuitive user interface.
+
+The platform focuses on user interaction, dynamic content rendering, and smooth UI transitions, providing a foundation for scalable social applications.
+
+It is built with a frontend-first approach while simulating backend behavior using LocalStorage, making it efficient and lightweight.
+
+**Key Features:**
+- Create and publish posts dynamically
+- Like system with real-time UI updates
+- Comment functionality for user interaction
+- Dynamic feed rendering
+- User profile preview section
+- Clean card-based UI with soft aesthetics
+- Responsive layout for all screen sizes
+- LocalStorage-based data persistence
+- Smooth UI interactions and transitions
+- Structured layout for scalability (ready for backend integration)
+
+**Tech Stack:** HTML5 | CSS3 | JavaScript (ES6) | Firebase | Cloudinary | Netlify
 
 ---
 
