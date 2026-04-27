@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zenvyra | Profile</title>
+
+ <!--title logo -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo2.png" media="(prefers-color-scheme: light)" />
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/logo1.png" media="(prefers-color-scheme: dark)" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- custom css -->
+  <link rel="stylesheet" href="./css/style.css">
+
+  <!-- Disable source view by right click -->
+  <script>
+    document.addEventListener('contextmenu', event => event.preventDefault());
+  </script>
+  <style>
+    ::selection {
+      background: #fff;
+      color: #000;
+    }
+
+    body::after {
+      content: "© 2025 Hafsa Shahid";
+      position: fixed;
+      bottom: 5px;
+      right: 10px;
+      font-size: 10px;
+      opacity: 0.6;
+    }
+  </style>
+
+</head>
+<body>
+  <div class="page-shell">
+    <header class="app-topbar profile-topbar">
+      <div class="topbar-left">
+        <div class="brand-block">
+          <p class="eyebrow">Profile</p>
+          <h1>Zenvyra</h1>
+        </div>
+      </div>
+      <div class="topbar-actions">
+        <a class="ghost-btn" href="./feed.html">Back to Feed</a>
+      </div>
+    </header>
+
+    <main class="profile-layout refined">
+      <section class="panel profile-editor" data-animate="profile-panel">
+        <div class="panel-heading">
+          <p class="eyebrow">Edit space</p>
+          <h2>Edit Your Profile</h2>
+          <p>Update your name, bio, and display photo.</p>
+        </div>
+        <form id="profileForm">
+          <div class="profile-preview">
+            <img id="profilePreview" class="avatar avatar-xlarge" src="https://placehold.co/140x140/6e6a78/ffffff?text=U" alt="Profile preview">
+            <div>
+              <h3 id="profileTitle">Your Profile</h3>
+              <p id="profileEmail">Login required</p>
+            </div>
+          </div>
+          <label>
+            Name
+            <input id="profileName" type="text" placeholder="Your full name" required>
+          </label>
+          <label>
+            Bio
+            <textarea id="profileBio" rows="4" placeholder="Tell people about yourself"></textarea>
+          </label>
+          <label>
+            Profile Picture
+            <input id="profilePicFile" type="file" accept="image/*">
+          </label>
+          <button class="primary-btn" type="submit">Save Profile</button>
+        </form>
+        <p id="profileMessage" class="helper-text"></p>
+      </section>
+
+      <section class="panel public-profile" data-animate="profile-panel">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Public view</p>
+            <h2 id="publicHeading">User profile</h2>
+          </div>
+          <button id="followBtn" class="ghost-btn hidden" type="button">Follow</button>
+        </div>
+        <p id="publicHint" class="helper-text">Follow this user to view followers-only posts.</p>
+        <div class="public-hero">
+          <img id="publicAvatar" class="avatar avatar-xlarge" src="https://placehold.co/140x140/6e6a78/ffffff?text=U" alt="Public avatar">
+          <div>
+            <h3 id="publicName">User Name</h3>
+            <p id="publicBio">Bio will appear here.</p>
+          </div>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-box lively stone">
+            <strong id="publicFollowers">0</strong>
+            <span>Followers</span>
+          </div>
+          <div class="stat-box lively fog">
+            <strong id="publicFollowing">0</strong>
+            <span>Following</span>
+          </div>
+        </div>
+        <div id="profilePosts" class="feed-list">
+          <p class="empty-state">User posts will appear here.</p>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script type="module" src="./js/profile.js"></script>
+</body>
+</html>

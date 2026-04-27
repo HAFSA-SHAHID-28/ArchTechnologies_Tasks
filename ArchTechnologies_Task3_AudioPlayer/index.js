@@ -119,6 +119,7 @@ function playIdx(i) {
   recent = [t.id, ...recent.filter((x) => x !== t.id)].slice(0, 30);
   render();
 }
+
 function togglePlay() {
   if (cur === -1) {
     if (filtered().length) playIdx(0);
@@ -136,11 +137,13 @@ function togglePlay() {
     document.getElementById("npsArt").classList.add("spin");
   }
 }
+
 function next() {
   const l = filtered();
   if (!l.length) return;
   playIdx(sh ? Math.floor(Math.random() * l.length) : (cur + 1) % l.length);
 }
+
 function prev() {
   if (audio.currentTime > 3) {
     audio.currentTime = 0;
@@ -150,6 +153,7 @@ function prev() {
   if (!l.length) return;
   playIdx((cur - 1 + l.length) % l.length);
 }
+
 function setPico(p) {
   document.getElementById("pico").innerHTML = p
     ? '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>'
