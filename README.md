@@ -53,7 +53,7 @@ Unlike basic to-do apps, Tasque emphasizes priority management, progress trackin
 ---
 
 ### 3. **Velvorea | Ethical Audio Player ** 🎧✨ 
-**Live Demo:** [Velvorea]( https://tasque-todoapp.netlify.app/) 
+**Live Demo:** [Velvorea](https://velvorea-audio-player.netlify.app/)
 
 **Description:**  
 Sautra is a modern, minimal, and ethically-designed web-based audio player built with a focus on clean UI, smooth interactions, and purposeful listening.
